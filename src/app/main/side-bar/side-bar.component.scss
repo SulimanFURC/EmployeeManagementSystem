@@ -1,0 +1,33 @@
+.active {
+    color: #008cff !important;
+    text-decoration: none;
+    background-color: rgba(0, 140, 255, 0.05) !important;
+    font-weight: 500;
+}
+
+.las{
+    font-size: 15px;
+}
+
+.sidebar_menu {
+    width: 200px;
+    z-index: 12;
+    position: fixed;
+    box-shadow: 0 2px 6px 0 rgba(218, 218, 253, 0.65), 0 0px 6px 0 rgba(206, 206, 238, 0.54);
+}
+
+.nav-link {
+    font-size: 15px;
+}
+.sub-menu {
+    li {
+        cursor: pointer;
+        &:hover {
+            background-color: rgba(0, 140, 255, 0.05) !important;
+            border-radius: 12px;
+        }
+        a {
+            font-size: 13px;
+        }
+    }
+}

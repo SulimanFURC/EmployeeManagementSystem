@@ -1,1 +1,162 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+
+$border-info: 4px solid #0dcaf0;
+$border-danger: 4px solid #fd3550 !important;
+$border-success: 4px solid #15ca20 !important;
+$border-warning: 4px solid rgb(255,193,7) !important;
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-size: 14px;
+}
+
+// custom card style
+.card-wrapper {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%), 0 2px 6px 0 rgb(206 206 238 / 54%);
+    .header {
+        display: flex;
+        margin-bottom: 15px;
+        .title {
+            font-size: 18px;
+            font-weight: 500;
+            text-transform: capitalize;
+            margin: 0;
+        }
+    }
+}
+
+
+.bg-badge-danger {
+    background-color: rgba(242, 17, 54, 0.12) !important;
+    color: #e63c3c !important;
+}
+.bg-badge-success {
+    background-color: rgba(15, 183, 107, 0.12) !important;
+    color: #26af48 !important;
+}
+
+
+.text-info {
+    color: #0dcaf0!important;
+}
+.text-danger {
+    color: #fd3550 !important;
+}
+.text-success {
+    color: #15ca20!important;
+}
+.text-warning {
+    color: #ffc107!important;
+}
+
+.border-info {
+    border-left: $border-info;
+}
+.border-danger {
+    border-left: $border-danger;
+}
+.border-success {
+    border-left: $border-success;
+}
+.border-warning {
+    border-left: $border-warning;
+}
+
+// gradient background colors 
+.bg-gradient-blues {
+    background: linear-gradient(to right, #56ccf2, #2f80ed)!important;
+}
+.bg-gradient-burning {
+    background: linear-gradient(to right, #ff416c, #ff4b2b)!important;
+}
+.bg-gradient-ohhappiness {
+    background: #00b09b;
+    background: -webkit-linear-gradient( 45deg , #00b09b, #96c93d)!important;
+    background: linear-gradient( 45deg , #00b09b, #96c93d)!important;
+}
+.bg-gradient-orange {
+    background: #fc4a1a;
+    background: -webkit-linear-gradient( 45deg , #fc4a1a, #f7b733)!important;
+    background: linear-gradient( 45deg , #fc4a1a, #f7b733)!important;
+}
+// gradient background colors 
+
+// solid background colors
+
+.bg-solid-blue {
+    background: #56ccf2;
+}
+.bg-solid-burning {
+    background: #ff416c;
+}
+.bg-solid-success {
+    background: #00b09b;
+}
+.bg-solid-danger {
+    background: #fc4a1a;
+}
+
+
+// solid background colors
+
+.widgets-icons-2 {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ededed;
+    font-size: 27px;
+    border-radius: 10px;
+}
+
+
+// font sizes 
+.font-13 {
+    font-size: 13px;
+}
+
+.font-15 {
+    font-size: 15px;
+}
+
+
+
+// table style
+table {
+    thead {
+        tr {
+            th {
+                font-size: 13px;
+                font-weight: 500;
+            }
+        }
+    }
+    tbody {
+        tr {
+            td,th {
+                font-size: 12px;
+                .action {
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    i {
+                        font-size: 18px;
+                        cursor: pointer;
+                    }
+                }
+            }
+            
+        }
+    }
+}

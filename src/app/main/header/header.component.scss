@@ -1,0 +1,174 @@
+.topbar {
+    // position: fixed;
+    top: 0;
+    left: 200px;
+    right: 0;
+    height: 60px;
+    background: #fff;
+    border-bottom: 1px solid rgb(228 228 228 / 0%);
+    z-index: 10;
+    -webkit-box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%), 0 0px 6px 0 rgb(206 206 238 / 54%);
+    box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%), 0 0px 6px 0 rgb(206 206 238 / 54%);
+    .notification_bell {
+        color: #212529;
+        font-size: 22px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        cursor: pointer;
+        &:hover{
+            background-color: #f2f9ff;
+            color: #008cff;
+        }
+        .alert-count {
+            position: absolute;
+            top: 2px;
+            left: 22px;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: 500;
+            color: #fff;
+            background: #f62718;
+        }
+    }
+}
+
+.notification_bell.dropdown-toggle::after {
+    display: none;
+}
+
+i.las {
+    font-size: 20px;
+}
+.notification_dropdown{
+    border: 0;
+    padding: 0 0;
+    border-radius: 10px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .15);
+    &::after {
+        content: '';
+        width: 13px;
+        height: 13px;
+        background: #fff;
+        position: absolute;
+        top: -6px;
+        right: 16px;
+        transform: rotate(45deg);
+        border-top: 1px solid #ddd;
+        border-left: 1px solid #ddd;
+    }
+    .msg-header {
+        padding: 11px 17px;
+        border-bottom: 1px solid #ededed;
+        background-clip: border-box;
+        background-color: #ffffff;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        .msg-header-title {
+            font-size: 16px;
+            color: #1c1b1b;
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+        .msg-header-badge {
+            background-color: rgb(0 140 255 / 12%);
+            color: #008cff;
+            padding: 2px 8px;
+            margin-bottom: 0;
+            border-radius: 4px;
+        }
+    }
+    .header-notifications-list {
+        position: relative;
+        max-height: 360px;
+        overflow: hidden auto;
+        .user-online {
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 1px;
+                right: 17px;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                box-shadow: 0 0 0 2px #fff;
+                background: #16e15e;
+            }
+            .msg-avatar {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                margin-right: 15px;
+            }
+        }
+        .msg-name {
+            font-size: 14px;
+            margin-bottom: 0;
+            color: #212529;
+        }
+        .msg-info {
+            font-size: 13px;
+            margin-bottom: 0;
+            color: #818189;
+        }
+    }
+    .msg-footer {
+        padding: 0.8rem 1rem;
+        color: #1c1b1b;
+        border-top: 1px solid #ededed;
+        background-clip: border-box;
+        background: 0 0;
+        font-size: 14px;
+        font-weight: 500;
+        border-bottom-left-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
+    }
+}
+
+.dropdown-item {
+    padding: 0.5rem 1.3rem;
+    cursor: pointer;
+}
+
+
+
+
+.user-box {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    border-left: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
+    .user-img {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        border: 0 solid #e5e5e5;
+        padding: 0;
+    }
+    .user-info {
+        .user-name {
+            font-size: 15px;
+            font-weight: 500;
+            color: #413c3c;
+        }
+        .designattion {
+            font-size: 13px;
+            color: #747474;
+        }
+    }
+}
