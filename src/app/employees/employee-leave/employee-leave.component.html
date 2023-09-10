@@ -1,0 +1,76 @@
+
+<div class="card-wrapper">
+    <div class="header justify-content-between">
+        <h5 class="title">Employees Leave Details</h5>
+        <button type="button" class="btn btn-outline-primary font-13" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <i class="las la-plus"></i>
+            Add Leave
+        </button>
+    </div>
+    <div class="employee_list table-responsive">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Leave Type</th>
+                <th scope="col">Leave Date</th>
+                <th scope="col">Reason</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of employee_leave">
+                <th scope="row">{{item.id}}</th>
+                <td>{{item.name}}</td>
+                <td>{{item.leave_type}}</td>
+                <td>{{item.leave_date}}</td>
+                <td>{{item.leave_reason}}</td>
+                <td>
+                    <div class="action">
+                        <i class="las la-edit"></i>
+                        <i class="las la-trash"></i>
+                        <i class="las la-eye"></i>
+                    </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+
+<app-small-modal title="Employee Leave">
+    <div class="create_employee_wrapper">
+      <form>
+        <div class="row">
+
+          <div class="col-lg-12 col-md-12 form-input mb-3">
+            <span class="form-label">Leave Type</span>
+                <select class="form-control">
+                <option value="" selected>Casual Leave</option>
+                <option value="">Medical Leave</option>
+                <option value="">Maternity Leave</option>
+              </select>
+          </div>
+          <div class="col-lg-6 col-md-12 form-input mb-3">
+            <span class="form-label">From*</span>
+            <input type="date" class="form-control" placeholder="From Date">
+          </div>
+          <div class="col-lg-6 col-md-12 form-input mb-3">
+            <span class="form-label">To*</span>
+            <input type="date" class="form-control" placeholder="To Date">
+          </div>
+          <div class="col-lg-12 col-md-12 form-input mb-3">
+            <span class="form-label">Reason</span>
+            <textarea name="" id="" cols="30" rows="3" class="form-control"></textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 form-input mb-3">
+            <button type="submit" class="btn btn-outline-primary">Create</button>
+          </div>
+        </div>
+      </form>
+    </div>
+</app-small-modal>

@@ -5,12 +5,18 @@ import { EmployeesRoutingModule } from './employees-routing.module';
 import { EmployeeWrapperComponent } from './employee-wrapper/employee-wrapper.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { SharedModule } from '../shared/shared.module';
+import { OvertimeComponent } from './overtime/overtime.component';
+import { EmployeeLeaveComponent } from './employee-leave/employee-leave.component';
+import { EmployeeAttendanceComponent } from './employee-attendance/employee-attendance.component';
 
 
 @NgModule({
   declarations: [
     EmployeeWrapperComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
+    OvertimeComponent,
+    EmployeeLeaveComponent,
+    EmployeeAttendanceComponent
   ],
   imports: [
     CommonModule,

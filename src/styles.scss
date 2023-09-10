@@ -35,6 +35,47 @@ p {
     }
 }
 
+// form styles 
+form {
+    .form-input {
+        .form-label {
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .form-control {
+            display: block;
+            width: 100%;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: black;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-color: white;
+            border: 1px solid #bababa;
+            border-radius: 7px;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            &:focus{
+                box-shadow: none;
+                border-color: #008cff;
+            }
+        }
+    }
+}
+
+
+// modal dialog style 
+.modal-content {
+    border: 0;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    .modal-header {
+        border: 0;
+    }
+}
+
 
 .bg-badge-danger {
     background-color: rgba(242, 17, 54, 0.12) !important;
