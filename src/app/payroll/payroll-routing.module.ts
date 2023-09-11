@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PayrollWrapperComponent } from './payroll-wrapper/payroll-wrapper.component';
 import { EmployeeSalaryComponent } from './employee-salary/employee-salary.component';
 import { PaySlipComponent } from './pay-slip/pay-slip.component';
 

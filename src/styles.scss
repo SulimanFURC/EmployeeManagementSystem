@@ -168,9 +168,28 @@ form {
 .bg-solid-danger {
     background: #fc4a1a;
 }
-
-
 // solid background colors
+
+// light backgrounds 
+.bg-light-primary {
+    background-color: rgb(13 110 253 / .11)!important;
+}
+.bg-light-danger {
+    background-color: rgb(244 17 39 / .11)!important;
+}
+.bg-light-info {
+    background-color: rgb(13 202 240 / 18%)!important;
+}
+.bg-light-success {
+    background-color: rgb(23 160 14 / .11)!important;
+}
+.bg-light-warning {
+    background-color: rgb(255 193 7 / .11)!important;
+}
+
+// light backgrounds 
+
+
 
 .widgets-icons-2 {
     width: 56px;

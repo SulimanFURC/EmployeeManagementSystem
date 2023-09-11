@@ -1,0 +1,348 @@
+<div class="card-wrapper border-info">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="profile-view">
+                    <div class="profile-img-wrap">
+                        <div class="profile-img">
+                            <a href="#"><img alt=""
+                                    src="https://smarthr.dreamguystech.com/codeigniter/template/maroon/public/assets/img/profiles/avatar-02.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="profile-basic">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="profile-info-left">
+                                    <h3 class="user-name m-t-0 mb-0">John Doe</h3>
+                                    <h6 class="text-muted">UI/UX Design Team</h6>
+                                    <small class="text-muted">Web Designer</small>
+                                    <div class="staff-id">Employee ID : FT-0001</div>
+                                    <div class="small doj text-muted">Date of Join : 1st Jan 2013</div>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <ul class="personal-info">
+                                    <li>
+                                        <div class="title">Phone:</div>
+                                        <div class="text"><a href="">9876543210</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="title">Email:</div>
+                                        <div class="text"><a href="">johndoe@example.com</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="title">Birthday:</div>
+                                        <div class="text">24th July</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">Address:</div>
+                                        <div class="text">1861 Bayonne Ave, Manchester Township, NJ, 08759</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">Gender:</div>
+                                        <div class="text">Male</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pro-edit">
+                        <a data-bs-target="#profile_info" data-bs-toggle="modal" class="edit-icon" href="#">
+                            <i class="las la-pen"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="">
+    <tabset type="pills">
+        <tab heading="Profile">
+            <div [ngTemplateOutlet]="userProfile"></div>
+        </tab>
+
+        <tab heading="Salary Info">
+            <div [ngTemplateOutlet]="userSalary"></div>
+        </tab>
+    </tabset>
+</div>
+
+
+<!-- profile template  -->
+<ng-template #userProfile>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card-wrapper border-info">
+                <div class="header">
+                    <h5 class="title">Personal Information</h5>
+                </div>
+                <div class="personal_info_body">
+                    <ul class="personal-info">
+                        <li>
+                            <div class="title">Passport No.</div>
+                            <div class="text">9876543210</div>
+                        </li>
+                        <li>
+                            <div class="title">Passport Exp Date.</div>
+                            <div class="text">9876543210</div>
+                        </li>
+                        <li>
+                            <div class="title">Tel</div>
+                            <div class="text"><a href="">9876543210</a></div>
+                        </li>
+                        <li>
+                            <div class="title">Nationality</div>
+                            <div class="text">Indian</div>
+                        </li>
+                        <li>
+                            <div class="title">Religion</div>
+                            <div class="text">Christian</div>
+                        </li>
+                        <li>
+                            <div class="title">Marital status</div>
+                            <div class="text">Married</div>
+                        </li>
+                        <li>
+                            <div class="title">Employment of spouse</div>
+                            <div class="text">No</div>
+                        </li>
+                        <li>
+                            <div class="title">No. of children</div>
+                            <div class="text">2</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card-wrapper border-info">
+                <div class="header">
+                    <h5 class="title">Emergency Contact</h5>
+                </div>
+                <div class="emergency_info_wrapper">
+                    <h5 class="subtitle font-15 mb-0">Primary Contact</h5>
+                    <ul class="personal-info">
+                        <li>
+                            <div class="title">Name</div>
+                            <div class="text">John Doe</div>
+                        </li>
+                        <li>
+                            <div class="title">Relationship</div>
+                            <div class="text">Father</div>
+                        </li>
+                        <li>
+                            <div class="title">Phone </div>
+                            <div class="text">9876543210, 9876543210</div>
+                        </li>
+                    </ul>
+                    <hr>
+                    <h5 class="subtitle font-15">Secondary Contact</h5>
+                    <ul class="personal-info">
+                        <li>
+                            <div class="title">Name</div>
+                            <div class="text">John Doe</div>
+                        </li>
+                        <li>
+                            <div class="title">Relationship</div>
+                            <div class="text">Father</div>
+                        </li>
+                        <li>
+                            <div class="title">Phone </div>
+                            <div class="text">9876543210, 9876543210</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card-wrapper border-warning">
+                <div class="header">
+                    <h5 class="title">Bank Information</h5>
+                </div>
+                <div class="personal_info_body">
+                    <ul class="personal-info">
+                        <li>
+                            <div class="title">Bank name</div>
+                            <div class="text">ICICI Bank</div>
+                        </li>
+                        <li>
+                            <div class="title">Bank account No.</div>
+                            <div class="text">159843014641</div>
+                        </li>
+                        <li>
+                            <div class="title">IFSC Code</div>
+                            <div class="text">ICI24504</div>
+                        </li>
+                        <li>
+                            <div class="title">PAN No</div>
+                            <div class="text">TC000Y56</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card-wrapper border-warning">
+                <div class="header">
+                    <h5 class="title">Family Information</h5>
+                </div>
+                <div class="emergency_info_wrapper">
+                    <div class="employee_list table-responsive">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Relationship</th>
+                                <th scope="col">Phone</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Suliman</td>
+                                <td>Brother</td>
+                                <td>123456789</td>
+                              </tr>
+                              <tr>
+                                <td>Suliman</td>
+                                <td>Brother</td>
+                                <td>123456789</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+<!-- profile template  -->
+
+
+<!-- user salary template  -->
+
+<ng-template #userSalary>
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="card-wrapper border-info">
+                <div class="text-center">
+                    <div class="widgets-icons rounded-circle mx-auto bg-light-primary mb-3">
+                        <i class="las la-dollar-sign"></i>
+                    </div>
+                    <h4 class="my-1">84K</h4>
+                    <p class="mb-0 text-secondary text-nowrap">Basic Salary</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card-wrapper border-warning">
+                <div class="text-center">
+                    <div class="widgets-icons rounded-circle mx-auto bg-light-warning mb-3">
+                        <i class="las la-hand-holding-usd"></i>
+                    </div>
+                    <h4 class="my-1">84K</h4>
+                    <p class="mb-0 text-secondary text-nowrap">Salary Received</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card-wrapper border-success">
+                <div class="text-center">
+                    <div class="widgets-icons rounded-circle mx-auto bg-light-success mb-3">
+                        <i class="las la-money-bill-alt"></i>
+                    </div>
+                    <h4 class="my-1">84K</h4>
+                    <p class="mb-0 text-secondary text-nowrap">Advance Taken</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card-wrapper border-danger">
+                <div class="text-center">
+                    <div class="widgets-icons rounded-circle mx-auto bg-light-danger mb-3">
+                        <i class="las la-money-bill-wave-alt"></i>
+                    </div>
+                    <h4 class="my-1">84K</h4>
+                    <p class="mb-0 text-secondary text-nowrap">Deferred Salary</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card-wrapper">
+                <div class="header">
+                    <h5 class="title">Salary Information</h5>
+                </div>
+                <div class="employee_list table-responsive">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Month</th>
+                            <th scope="col">Year</th>
+                            <th scope="col">Basic Salary</th>
+                            <th scope="col">Salary Received</th>
+                            <th scope="col">Salary Defered</th>
+                            <th scope="col">Advance Salary</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>January</td>
+                            <td>2023</td>
+                            <td>$2200</td>
+                            <td>$1500</td>
+                            <td>$700</td>
+                            <td>$0</td>
+                            <td>
+                                <div class="action">
+                                    <i class="las la-edit"></i>
+                                    <i class="las la-trash"></i>
+                                </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>1</td>
+                            <td>January</td>
+                            <td>2023</td>
+                            <td>$2200</td>
+                            <td>$1500</td>
+                            <td>$700</td>
+                            <td>$0</td>
+                            <td>
+                                <div class="action">
+                                    <i class="las la-edit"></i>
+                                    <i class="las la-trash"></i>
+                                </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>1</td>
+                            <td>January</td>
+                            <td>2023</td>
+                            <td>$2200</td>
+                            <td>$1500</td>
+                            <td>$700</td>
+                            <td>$0</td>
+                            <td>
+                                <div class="action">
+                                    <i class="las la-edit"></i>
+                                    <i class="las la-trash"></i>
+                                </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+
+<!-- user salary template  -->

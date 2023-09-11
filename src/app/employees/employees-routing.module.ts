@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EmployeeWrapperComponent } from './employee-wrapper/employee-wrapper.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeLeaveComponent } from './employee-leave/employee-leave.component';
 import { EmployeeAttendanceComponent } from './employee-attendance/employee-attendance.component';
 import { OvertimeComponent } from './overtime/overtime.component';
+import { EmployeeProfileComponent } from './employee-profile/employee-profile.component';
 
 const routes: Routes = [
-  // {path: '', component:EmployeeWrapperComponent},
   {path: 'EmployeesList', component: EmployeeListComponent},
   {path: 'EmployeesLeave', component: EmployeeLeaveComponent},
   {path: 'EmployeesAttendace', component: EmployeeAttendanceComponent},
   {path: 'EmployeesOvertime', component: OvertimeComponent},
+  {path: 'employee-profile', component: EmployeeProfileComponent},
 
 ];
 
