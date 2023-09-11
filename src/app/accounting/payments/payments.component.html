@@ -1,0 +1,134 @@
+
+<div class="row">
+    <div class="col-lg-3">
+        <div class="color-card blue-card">
+            <div class="d-flex align-items-center">
+                <div>
+                    <p class="mb-0 text-white">Total Salary</p>
+                    <h4 class="my-1 text-white">845K</h4>
+                </div>
+                <div class="text-white ms-auto font-35"><i class="bx bx-cart-alt"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="color-card red-card">
+            <div class="d-flex align-items-center">
+                <div>
+                    <p class="mb-0 text-white">Total Paid Salary</p>
+                    <h4 class="my-1 text-white">102K</h4>
+                </div>
+                <div class="text-white ms-auto font-35"><i class="bx bx-cart-alt"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="color-card yellow-card">
+            <div class="d-flex align-items-center">
+                <div>
+                    <p class="mb-0 text-white">Advance Paid Salary</p>
+                    <h4 class="my-1 text-white">85K</h4>
+                </div>
+                <div class="text-white ms-auto font-35"><i class="bx bx-cart-alt"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="color-card green-card">
+            <div class="d-flex align-items-center">
+                <div>
+                    <p class="mb-0 text-white">Deferred Salary</p>
+                    <h4 class="my-1 text-white">120K</h4>
+                </div>
+                <div class="text-white ms-auto font-35"><i class="bx bx-cart-alt"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="card-wrapper">
+    <div class="header justify-content-between">
+        <h5 class="title">Employees List</h5>
+        <button type="button" class="btn btn-outline-primary font-13" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <i class="las la-plus"></i>
+            Add Payments
+        </button>
+    </div>
+    <div class="employee_list table-responsive">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Date</th>
+                <th scope="col">Salary Type</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of payments">
+                <th scope="row">{{item.id}}</th>
+                <td>{{item.employee_name}}</td>
+                <td>{{item.date}}</td>
+                <td>{{item.type}}</td>
+                <td>{{item.amount}}</td>
+                <td>
+                    <div class="action">
+                        <i class="las la-edit"></i>
+                        <i class="las la-trash"></i>
+                        <i class="las la-eye"></i>
+                    </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+
+<app-small-modal title="Add Salary">
+    <div class="create_employee_wrapper">
+      <form>
+        <div class="row">
+          <div class="col-lg-6 col-md-12 form-input mb-3">
+            <span class="form-label">Select Employee</span>
+            <select name="" id=""  class="form-control">
+                <option value="">Suliman</option>
+                <option value="">Asad</option>
+                <option value="">Samir</option>
+            </select>
+          </div>
+          <div class="col-lg-6 col-md-12 form-input mb-3">
+            <span class="form-label">Payment Date</span>
+            <input type="date" class="form-control" placeholder="First Name">
+          </div>
+          <div class="col-lg-6 col-md-12 form-input mb-3">
+            <span class="form-label">Salary Type</span>
+            <select name="" id=""  class="form-control">
+              <option value="">Full Month Salary</option>
+              <option value="">Half Month Salary</option>
+              <option value="">Need-Based Salary</option>
+              <option value="">Advance Salary</option>
+              <option value="">Deferred Salary</option>
+            </select>
+          </div>
+          <div class="col-lg-6 col-md-12 form-input mb-3">
+            <span class="form-label">Amount</span>
+            <input type="text" class="form-control" placeholder="800">
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 form-input mb-3">
+            <button type="submit" class="btn btn-outline-primary">Create</button>
+          </div>
+         
+        </div>
+      </form>
+    </div>
+</app-small-modal>

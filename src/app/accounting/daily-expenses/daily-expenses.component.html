@@ -1,0 +1,93 @@
+<div class="card-wrapper">
+    <div class="header justify-content-between">
+        <h5 class="title">Daily Expenses</h5>
+        <button type="button" class="btn btn-outline-primary font-13" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <i class="las la-plus"></i>
+            Add Expense
+        </button>
+    </div>
+    <div class="employee_list table-responsive">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Expense Name</th>
+                <th scope="col">Date</th>
+                <th scope="col">Expense Amount</th>
+                <th scope="col">Amount Paid</th>
+                <th scope="col">Payment Type</th>
+                <th scope="col">Attachment</th>
+                <th scope="col">Description</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of expenses">
+                <th scope="row">{{item.id}}</th>
+                <td>{{item.expense_name}}</td>
+                <td>{{item.date | date}}</td>
+                <td>{{item.expense_amount}}</td>
+                <td>{{item.amount_paid}}</td>
+                <td>{{item.payment_mode}}</td>
+                <td>{{item.expense_attachment}}</td>
+                <td>{{item.description}}</td>
+                <td>
+                    <div class="action">
+                        <i class="las la-edit"></i>
+                        <i class="las la-trash"></i>
+                        <i class="las la-eye"></i>
+                    </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+
+<app-my-modal title="Add Daily Expense">
+    <div class="create_employee_wrapper">
+      <form>
+        <div class="row">
+          <div class="col-lg-6 col-md-12 form-input mb-3">
+            <span class="form-label">Expense Name</span>
+            <input type="text" class="form-control" placeholder="i.e. orderd car spare parts">
+          </div>
+          <div class="col-lg-6 col-md-12 form-input mb-3">
+            <span class="form-label">Expense Date</span>
+            <input type="date" class="form-control" placeholder="First Name">
+          </div>
+          <div class="col-lg-6 col-md-12 form-input mb-3">
+            <span class="form-label">Expense Amount</span>
+            <input type="text" class="form-control" placeholder="800">
+          </div>
+          <div class="col-lg-6 col-md-12 form-input mb-3">
+            <span class="form-label">Amount Paid</span>
+            <input type="text" class="form-control" placeholder="800">
+          </div>
+          <div class="col-lg-6 col-md-12 form-input mb-3">
+            <span class="form-label">Payment Type</span>
+            <select name="" id=""  class="form-control">
+                <option value="">Cash</option>
+                <option value="">Bank Transfer</option>
+                <option value="">Easypaisa</option>
+              </select>
+          </div>
+          <div class="col-lg-6 col-md-12 form-input mb-3">
+            <span class="form-label">Attachment</span>
+            <input type="file" class="form-control" placeholder="800">
+          </div>
+          <div class="col-lg-12 col-md-12 form-input mb-3">
+            <span class="form-label">Description</span>
+            <textarea class="form-control" cols="30" rows="3"></textarea>
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 form-input mb-3">
+            <button type="submit" class="btn btn-outline-primary">Create</button>
+          </div>
+         
+        </div>
+      </form>
+    </div>
+</app-my-modal>

@@ -1,0 +1,44 @@
+
+<div class="card-wrapper">
+    <div class="header justify-content-between">
+        <h5 class="title">Employees Salaries</h5>
+        <!-- <button type="button" class="btn btn-outline-primary font-13" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <i class="las la-plus"></i>
+            Add Employee
+        </button> -->
+    </div>
+    <div class="employee_list table-responsive">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Join Date</th>
+                <th scope="col">Designation</th>
+                <th scope="col">Basic Pay</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of employees">
+                <th scope="row">{{item.id}}</th>
+                <td>{{item.name}}</td>
+                <td>{{item.contact}}</td>
+                <td>{{item.join_date}}</td>
+                <td>{{item.role}}</td>
+                <td>{{item.basic_pay}}</td>
+                <td>
+                    <div class="action">
+                        <i class="las la-trash"></i>
+                        <a routerLink="/Payroll/employee-pay-slip">
+                            <i class="las la-eye"></i>
+                        </a>
+                        
+                    </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
