@@ -5,12 +5,14 @@ import { PayrollRoutingModule } from './payroll-routing.module';
 import { EmployeeSalaryComponent } from './employee-salary/employee-salary.component';
 import { PaySlipComponent } from './pay-slip/pay-slip.component';
 import { SharedModule } from '../shared/shared.module';
+import { PayrollWrapperComponent } from './payroll-wrapper/payroll-wrapper.component';
 
 
 @NgModule({
   declarations: [
     EmployeeSalaryComponent,
-    PaySlipComponent
+    PaySlipComponent,
+    PayrollWrapperComponent
   ],
   imports: [
     CommonModule,

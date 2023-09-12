@@ -5,13 +5,21 @@ import { EmployeeLeaveComponent } from './employee-leave/employee-leave.componen
 import { EmployeeAttendanceComponent } from './employee-attendance/employee-attendance.component';
 import { OvertimeComponent } from './overtime/overtime.component';
 import { EmployeeProfileComponent } from './employee-profile/employee-profile.component';
+import { EmployeeWrapperComponent } from './employee-wrapper/employee-wrapper.component';
 
 const routes: Routes = [
-  {path: 'EmployeesList', component: EmployeeListComponent},
-  {path: 'EmployeesLeave', component: EmployeeLeaveComponent},
-  {path: 'EmployeesAttendace', component: EmployeeAttendanceComponent},
-  {path: 'EmployeesOvertime', component: OvertimeComponent},
-  {path: 'employee-profile', component: EmployeeProfileComponent},
+ {
+  path: '',
+  component: EmployeeWrapperComponent,
+  children: [
+    { path: '', redirectTo: 'employee-list', pathMatch: 'full'  },
+    {path: 'employee-list', component: EmployeeListComponent},
+    {path: 'employee-leave', component: EmployeeLeaveComponent},
+    {path: 'employee-attendance', component: EmployeeAttendanceComponent},
+    {path: 'employee-overtime', component: OvertimeComponent},
+    {path: 'employee-profile', component: EmployeeProfileComponent},
+  ]
+ }
 
 ];
 

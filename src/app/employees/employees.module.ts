@@ -10,6 +10,7 @@ import { EmployeeAttendanceComponent } from './employee-attendance/employee-atte
 import { EmployeeProfileComponent } from './employee-profile/employee-profile.component';
 
 import { TabsModule } from 'ngx-bootstrap/tabs';
+import { EmployeeWrapperComponent } from './employee-wrapper/employee-wrapper.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
     OvertimeComponent,
     EmployeeLeaveComponent,
     EmployeeAttendanceComponent,
-    EmployeeProfileComponent
+    EmployeeProfileComponent,
+    EmployeeWrapperComponent
   ],
   imports: [
     CommonModule,

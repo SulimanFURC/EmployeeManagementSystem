@@ -5,8 +5,15 @@ import { PaymentsComponent } from './payments/payments.component';
 import { DailyExpensesComponent } from './daily-expenses/daily-expenses.component';
 
 const routes: Routes = [
-  {path: 'payments', component:PaymentsComponent},
-  {path: 'daily-expense', component:DailyExpensesComponent},
+  {
+    path: '',
+    component: AccountingWrapperComponent,
+    children: [
+      { path: '', redirectTo: 'payments', pathMatch: 'full'  },
+      {path: 'payments', component:PaymentsComponent},
+      {path: 'daily-expense', component:DailyExpensesComponent},
+    ]
+  }
 ];
 
 @NgModule({

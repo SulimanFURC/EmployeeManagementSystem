@@ -2,10 +2,10 @@
 <div class="card-wrapper">
     <div class="header justify-content-between">
         <h5 class="title">Employees Salaries</h5>
-        <!-- <button type="button" class="btn btn-outline-primary font-13" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button type="button" class="btn btn-outline-primary font-13" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <i class="las la-plus"></i>
-            Add Employee
-        </button> -->
+            Add Salary
+        </button>
     </div>
     <div class="employee_list table-responsive">
         <table class="table">
@@ -17,6 +17,8 @@
                 <th scope="col">Join Date</th>
                 <th scope="col">Designation</th>
                 <th scope="col">Basic Pay</th>
+                <th scope="col">Received</th>
+                <th scope="col">Remaining Amount</th>
                 <th scope="col">Action</th>
               </tr>
             </thead>
@@ -27,6 +29,8 @@
                 <td>{{item.contact}}</td>
                 <td>{{item.join_date}}</td>
                 <td>{{item.role}}</td>
+                <td>{{item.basic_pay}}</td>
+                <td>{{item.basic_pay}}</td>
                 <td>{{item.basic_pay}}</td>
                 <td>
                     <div class="action">
@@ -42,3 +46,42 @@
           </table>
     </div>
 </div>
+
+<app-my-modal title="Add Employee Salary">
+  <div class="create_employee_wrapper">
+    <form>
+      <div class="row">
+        <div class="col-lg-6 col-md-12 form-input mb-3">
+          <span class="form-label">Select Employee</span>
+          <select name="" id=""  class="form-control">
+            <option value="">Suliman</option>
+            <option value="">Asad</option>
+            <option value="">Samir</option>
+          </select>
+        </div>
+        <div class="col-lg-6 col-md-12 form-input mb-3">
+          <span class="form-label">Joining Date</span>
+          <input type="date" class="form-control" disabled>
+        </div>
+        <div class="col-lg-4 col-md-6 form-input mb-3">
+          <span class="form-label">Designation</span>
+          <input type="text" class="form-control" placeholder="Car Mechanic" disabled>
+        </div>
+        <div class="col-lg-4 col-md-6 form-input mb-3">
+          <span class="form-label">Basic Pay</span>
+          <input type="text" class="form-control" placeholder="1200" disabled>
+        </div>
+        <div class="col-lg-4 col-md-6 form-input mb-3">
+          <span class="form-label">Salary Paid</span>
+          <input type="text" class="form-control" placeholder="First Name">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 form-input mb-3">
+          <button type="submit" class="btn btn-outline-primary">Submit</button>
+        </div>
+       
+      </div>
+    </form>
+  </div>
+</app-my-modal>
