@@ -5,7 +5,7 @@ import { AccountingRoutingModule } from './accounting-routing.module';
 import { AccountingWrapperComponent } from './accounting-wrapper/accounting-wrapper.component';
 import { PaymentsComponent } from './payments/payments.component';
 import { DailyExpensesComponent } from './daily-expenses/daily-expenses.component';
-import { InvoicesComponent } from './invoices/invoices.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -13,11 +13,11 @@ import { InvoicesComponent } from './invoices/invoices.component';
     AccountingWrapperComponent,
     PaymentsComponent,
     DailyExpensesComponent,
-    InvoicesComponent
   ],
   imports: [
     CommonModule,
-    AccountingRoutingModule
+    AccountingRoutingModule,
+    SharedModule
   ]
 })
 export class AccountingModule { }

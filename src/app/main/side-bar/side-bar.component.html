@@ -14,30 +14,35 @@
                         </a>
                     </li>
                     <li>
-                        <a routerLink="/Employees" routerLinkActive="active" class="nav-link" [ngClass]="{ 'link-dark': !isActive('/Employees') }">
+                        <a routerLink="Employees" routerLinkActive="active" class="nav-link" [ngClass]="{ 'link-dark': !isActive('/Employees') }">
                             <i class="las la-user"></i>
                             Employees
                         </a>
                         <ul class="nav nav-pills flex-column mb-auto ps-3 sub-menu" [ngClass]="{'d-none': !isActive('/Employees')  }">
                             <li>
-                                <a class="nav-link link-dark" routerLinkActive="active" routerLink="Employees/EmployeesList">
+                                <a class="nav-link link-dark" routerLinkActive="active" routerLink="/Employees/employee-list">
                                     All Employees
                                 </a>
                             </li>
                             <li>
-                                <a class="nav-link link-dark" routerLinkActive="active" routerLink="Employees/EmployeesLeave">
+                                <a class="nav-link link-dark" routerLinkActive="active" routerLink="/Employees/employee-leave">
                                     Leave Request
                                 </a>
                             </li>
                             <li>
-                                <a class="nav-link link-dark" routerLinkActive="active" routerLink="Employees/EmployeesAttendace">
+                                <a class="nav-link link-dark" routerLinkActive="active" routerLink="/Employees/employee-attendance">
                                     Attendance
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link link-dark" routerLinkActive="active" routerLink="/Employees/employee-overtime">
+                                    Overtime
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a routerLink="/Accounts" routerLinkActive="active" class="nav-link" [ngClass]="{ 'link-dark': !isActive('/Accounts') }">
+                        <a routerLink="Accounts" routerLinkActive="active" class="nav-link" [ngClass]="{ 'link-dark': !isActive('/Accounts') }">
                             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 32 32"
                                 height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -48,42 +53,32 @@
                         </a>
                         <ul class="nav nav-pills flex-column mb-auto ps-3 sub-menu" [ngClass]="{'d-none': !isActive('/Accounts')  }">
                             <li>
-                                <a class="nav-link link-dark" routerLinkActive="active" routerLink="Accounts/payment">
+                                <a class="nav-link link-dark" routerLinkActive="active" routerLink="Accounts/payments">
                                     Payments
                                 </a>
                             </li>
                             <li>
-                                <a class="nav-link link-dark" routerLinkActive="active" routerLink="Accounts/expenses">
+                                <a class="nav-link link-dark" routerLinkActive="active" routerLink="Accounts/daily-expense">
                                     Daily Expenses
-                                </a>
-                            </li>
-                            <li>
-                                <a class="nav-link link-dark" routerLinkActive="active" routerLink="Accounts/invoices">
-                                    Invoices
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a routerLink="/Payroll" routerLinkActive="active" class="nav-link" [ngClass]="{ 'link-dark': !isActive('/Payroll') }">
+                        <a routerLink="Payroll" routerLinkActive="active" class="nav-link" [ngClass]="{ 'link-dark': !isActive('/Payroll') }">
                             <i class="las la-money-bill-alt"></i>
                             Payroll
                         </a>
                         <ul class="nav nav-pills flex-column mb-auto ps-3 sub-menu" [ngClass]="{'d-none': !isActive('/Payroll')  }">
                             <li>
-                                <a class="nav-link link-dark">
-                                    Payslip
-                                </a>
-                            </li>
-                            <li>
-                                <a class="nav-link link-dark">
+                                <a class="nav-link link-dark" routerLinkActive="active" routerLink="Payroll/employee-salary">
                                     Employee Salary
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a routerLink="/Reports" routerLinkActive="active" class="nav-link" [ngClass]="{ 'link-dark': !isActive('/Reports') }">
+                        <a routerLink="Reports" routerLinkActive="active" class="nav-link" [ngClass]="{ 'link-dark': !isActive('/Reports') }">
                             <i class="las la-chart-pie"></i>
                             Reports
                         </a>
@@ -96,26 +91,6 @@
                             <li>
                                 <a class="nav-link link-dark">
                                     Invoice Report
-                                </a>
-                            </li>
-                            <li>
-                                <a class="nav-link link-dark">
-                                    Payments Report
-                                </a>
-                            </li>
-                            <li>
-                                <a class="nav-link link-dark">
-                                    Payslip Report
-                                </a>
-                            </li>
-                            <li>
-                                <a class="nav-link link-dark">
-                                    Leaves Report
-                                </a>
-                            </li>
-                            <li>
-                                <a class="nav-link link-dark">
-                                    Daily Report
                                 </a>
                             </li>
                         </ul>

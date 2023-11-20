@@ -7,42 +7,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaymentsComponent implements OnInit {
 
-  constructor() { }
-
   payments = [
     {
       id: 1,
-      Name: 'Asad',
-      FatherName: 'khan',
-      CNIC: 12364588,
-      Contact_No: 8745236987,
-      Emergency_No: 7744536987,
+      employee_name: 'John',
+      date: '12/08/2022',
+      type: 'Half Month Salary',
+      amount: 1200,
     },
     {
       id: 2,
-      Name: 'Suliman',
-      FatherName: 'khan',
-      CNIC: 12364588,
-      Contact_No: 8745236987,
-      Emergency_No: 7744536987,
+      employee_name: 'John',
+      date: '12/08/2022',
+      type: 'Full Month Salary',
+      amount: 1200,
     },
     {
       id: 3,
-      Name: 'Samir',
-      FatherName: 'khan',
-      CNIC: 12364588,
-      Contact_No: 8745236987,
-      Emergency_No: 7744536987,
+      employee_name: 'John',
+      date: '12/08/2022',
+      type: 'Need Base Salary',
+      amount: 1200,
     },
     {
       id: 4,
-      Name: 'Zeeshan',
-      FatherName: 'khan',
-      CNIC: 12364588,
-      Contact_No: 8745236987,
-      Emergency_No: 7744536987,
+      employee_name: 'John',
+      date: '12/08/2022',
+      type: 'Advance Salary',
+      amount: 1200,
     },
   ]
+  constructor() { }
 
   ngOnInit(): void {
   }

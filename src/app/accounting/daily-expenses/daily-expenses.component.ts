@@ -7,42 +7,49 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DailyExpensesComponent implements OnInit {
 
-  constructor() { }
-
   expenses = [
     {
       id: 1,
-      Name: 'Asad',
-      FatherName: 'khan',
-      CNIC: 12364588,
-      Contact_No: 8745236987,
-      Emergency_No: 7744536987,
+      expense_name: 'Lunch',
+      date: new Date(),
+      expense_amount: 1200,
+      amount_paid: 1000,
+      payment_mode: 'Cash',
+      expense_attachment: 'No attachment',
+      description: 'this is the description of the daily expenses',
     },
     {
       id: 2,
-      Name: 'Suliman',
-      FatherName: 'khan',
-      CNIC: 12364588,
-      Contact_No: 8745236987,
-      Emergency_No: 7744536987,
+      expense_name: 'Car Parts',
+      date: new Date(),
+      expense_amount: 1200,
+      amount_paid: 1000,
+      payment_mode: 'Installment',
+      expense_attachment: 'No attachment',
+      description: 'this is the description of the daily expenses',
     },
     {
       id: 3,
-      Name: 'Samir',
-      FatherName: 'khan',
-      CNIC: 12364588,
-      Contact_No: 8745236987,
-      Emergency_No: 7744536987,
+      expense_name: 'Dinner',
+      date: new Date(),
+      expense_amount: 1200,
+      amount_paid: 1000,
+      payment_mode: 'Cash',
+      expense_attachment: 'No attachment',
+      description: 'this is the description of the daily expenses',
     },
     {
       id: 4,
-      Name: 'Zeeshan',
-      FatherName: 'khan',
-      CNIC: 12364588,
-      Contact_No: 8745236987,
-      Emergency_No: 7744536987,
+      expense_name: 'Tea',
+      date: new Date(),
+      expense_amount: 1200,
+      amount_paid: 1000,
+      payment_mode: 'Online Bank Payment',
+      expense_attachment: 'No attachment',
+      description: 'this is the description of the daily expenses',
     },
   ]
+  constructor() { }
 
   ngOnInit(): void {
   }

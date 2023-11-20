@@ -1,1 +1,139 @@
-<p>overtime works!</p>
+<div class="">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="card-wrapper border-info">
+                <div class="d-flex align-items-center">
+                    <div>
+                        <p class="mb-0 text-secondary">Overtime Employees</p>
+                        <h4 class="my-1 text-info">12</h4>
+                        <p class="mb-0 font-13">This Month</p>
+                    </div>
+                    <div class="widgets-icons-2 rounded-circle bg-gradient-blues text-white ms-auto">
+                        <i class="las la-user"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card-wrapper border-danger">
+                <div class="d-flex align-items-center">
+                    <div>
+                        <p class="mb-0 text-secondary">Overtime Hours</p>
+                        <h4 class="my-1 text-danger">118 Hrs</h4>
+                        <p class="mb-0 font-13">This Month</p>
+                    </div>
+                    <div class="widgets-icons-2 rounded-circle bg-gradient-burning text-white ms-auto">
+                        <i class="las la-clock"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card-wrapper border-success">
+                <div class="d-flex align-items-center">
+                    <div>
+                        <p class="mb-0 text-secondary">Pending Request</p>
+                        <h4 class="my-1 text-success">23</h4>
+                        <p class="mb-0 font-13">This Month</p>
+                    </div>
+                    <div class="widgets-icons-2 rounded-circle bg-gradient-ohhappiness text-white ms-auto">
+                        <i class="las la-spinner"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card-wrapper border-warning">
+                <div class="d-flex align-items-center">
+                    <div>
+                        <p class="mb-0 text-secondary">Rejected</p>
+                        <h4 class="my-1 text-warning">5</h4>
+                        <p class="mb-0 font-13">This Month</p>
+                    </div>
+                    <div class="widgets-icons-2 rounded-circle bg-gradient-orange text-white ms-auto">
+                        <i class="las la-ban"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card-wrapper">
+    <div class="header justify-content-between">
+        <h5 class="title">Employees List</h5>
+        <button type="button" class="btn btn-outline-primary font-13" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <i class="las la-plus"></i>
+            Add Overtime
+        </button>
+    </div>
+    <div class="employee_list table-responsive">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Overtime Date</th>
+                <th scope="col">Overtime Hours</th>
+                <th scope="col">Description</th>
+                <th scope="col">Status</th>
+                <th scope="col">Apprived By</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of overtime">
+                <th scope="row">{{item.id}}</th>
+                <td>{{item.name}}</td>
+                <td>{{item.overtime_date}}</td>
+                <td>{{item.overtime_hours}}</td>
+                <td>{{item.description}}</td>
+                <td>{{item.status}}</td>
+                <td>{{item.approved_by}}</td>
+                <td>
+                    <div class="action">
+                        <i class="las la-edit"></i>
+                        <i class="las la-trash"></i>
+                        <i class="las la-eye"></i>
+                    </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+
+<app-small-modal title="Add Overtime">
+    <div class="create_employee_wrapper">
+      <form>
+        <div class="row">
+          <div class="col-lg-6 col-md-12 form-input mb-3">
+            <span class="form-label">Select Employee</span>
+            <select name="" id=""  class="form-control">
+              <option value="">Suliman</option>
+              <option value="">Asad</option>
+              <option value="">Samir</option>
+            </select>
+          </div>
+          <div class="col-lg-6 col-md-612 form-input mb-3">
+            <span class="form-label">Overtime Date</span>
+            <input type="date" class="form-control" placeholder="First Name">
+          </div>
+          <div class="col-lg-12 col-md-12 form-input mb-3">
+            <span class="form-label">Overtime Hours</span>
+            <input type="text" class="form-control" placeholder="1 hours ">
+          </div>
+          <div class="col-lg-12 col-md-12 form-input mb-3">
+            <span class="form-label">Description</span>
+            <textarea class="form-control" cols="30" rows="3"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 form-input mb-3">
+            <button type="submit" class="btn btn-outline-primary">Add</button>
+          </div>
+         
+        </div>
+      </form>
+    </div>
+</app-small-modal>
